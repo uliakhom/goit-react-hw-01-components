@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import s from './Statistics.module.css'
 
-const Statistics = ({title, data}) => {
-    const elements = data.map(item => (
+const Statistics = ({title, stats}) => {
+    const elements = stats.map(item => (
         <li key={item.id} className={s.item}>
             <span className={s.label}>{item.label}</span>
             <span className={s.value}>{ item.percentage}%</span>
@@ -19,7 +19,7 @@ const Statistics = ({title, data}) => {
 
 export default Statistics
 Statistics.defaultProps = {
-    data : []}
+    stats : []}
 
 Statistics.propTypes = {
     title: PropTypes.string,
